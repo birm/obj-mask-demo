@@ -1,4 +1,5 @@
-var ctx = document.getElementsByTagName("canvas")[0].getContext('2d');
+var canvas = document.getElementsByTagName("canvas")[0]
+var ctx = canvas.getContext('2d');
 var loader = document.getElementById("fileup");
 loader.addEventListener('change', handleImage, false);
 
