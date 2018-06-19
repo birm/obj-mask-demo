@@ -10,7 +10,7 @@ function rangeToTensors(x,y,w,h){
     datas.push(tf.tensor1d(data))
     coords.push(tf.tensor1d(coord))
   }
-  return tensors;
+  return [coords,datas];
 }
 
 function imgtoTensors(){
