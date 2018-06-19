@@ -4,6 +4,7 @@ var loader = document.getElementById("fileup");
 loader.addEventListener('change', handleImage, false);
 
 var defImg = new Image();
+defImg.crossOrigin = "anonymous";
 defImg.src = "http://blog.vangoghgallery.com/wp-content/uploads/cafe.jpg";
 defImg.onload = function() {
     canvas.width = defImg.width;
@@ -17,6 +18,7 @@ function handleImage() {
         reader.onload = function(event) {
             var img = new Image();
             img.src = event.target.result;
+            img.crossOrigin="anonymous";
             img.onload = function() {
                 canvas.width = img.width;
                 canvas.height = img.height;
